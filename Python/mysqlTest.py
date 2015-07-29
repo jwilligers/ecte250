@@ -7,10 +7,13 @@ db = MySQLdb.connect("localhost", "root", "elect1", "SensorData")
 
 curs=db.cursor()
 
-id = 4
-timestamp = int(time.time())
+id = 5
+
 temp = 23.54
-curs.execute ("INSERT INTO data values("+str(id)+ ","+str(timestamp)+","+ str(temp)+")")
+for id in range(5,100):
+	timestamp = int(time.time())
+	print timestamp
+	curs.execute ("INSERT INTO data values("+str(id)+ ","+str(timestamp)+","+ str(temp+id/10)+")")
 
 db.commit()
 print "Data committed"
