@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
 
 	<title>{{  title  }} - ECTE250 Team 7 </title>
 	
 	<!-- Bootstrap core CSS -->
-	<link href="./static/css/bootstrap.css" />
+	<link rel="stylesheet" href="./static/css/bootstrap.min.css" />
 	        <!-- Custom styles for this template -->
         <link href="./static/blog.css" rel="stylesheet">
 	<!-- Optional theme -->
@@ -36,6 +36,12 @@
         <div class="blog-header">
         <h1 class="blog-title">ECTE 250 Team 7 2015</h1>
         <p class="lead blog-description">Gas monitoring by smart solutions.</p>
+
+	 <figure >
+	 <embed type="image/svg+xml" src="/barchart/"/>
+	 </figure>
+
+
         </div>
 
         <div class="row">
@@ -44,10 +50,7 @@
 
           <div class="blog-post">
             <h2 class="blog-post-title"></h2>
-            <p class="blog-post-meta"><a href="mooshroomgamers.html">This website was a project created by Mooshroom Gamers</a></p>
-
-
-            	<h1>Hello, {{ user.nickname}} </h1>
+            <h1>Hello, {{ user.nickname}} </h1>
           </div>
 
         </div>
@@ -55,7 +58,7 @@
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
-            <p>This is a project my ECTE250 Team 7 2015</p>
+            <p>This is a project for ECTE250 Team 7 Smart Solutions</p>
           </div>
           <div class="sidebar-module">
             <h4>Gases</h4>

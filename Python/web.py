@@ -1,7 +1,6 @@
-from flask import Flask
-from flask import render_template
-from flask import jsonify
+from flask import Flask, Response, render_template, jsonify
 from flask.ext.mysql import MySQL
+import pygal
 
 app = Flask(__name__)
 
@@ -23,6 +22,17 @@ def index():
 	user = {'nickname': 'Josh'}
 	return render_template('index.html',title='Home',user=user)
 
+@app.route('/barchart/')
+def forecast():
+    """ render svg graph """
+    bar_chart = pygal.Bar(width=450 ,height=300)
+    bar_chart.title = "Barchart"
+    inside,outside,params = [21,21.2,22,21,24.5,23.5],[15,18,20,34,23,23],['Monday','Tuesday','Wednesday', 'Thursday', 'Friday']
+    bar_chart.add('Inside', inside)
+    bar_chart.add('Outside', outside)
+    bar_chart.x_labels = params
+    return Response(response=bar_chart.render(), content_type='image/svg+xml')
 
 if __name__ == '__main__':
+	app.config['DEBUG'] = True
 	app.run(debug=True, host='0.0.0.0')
