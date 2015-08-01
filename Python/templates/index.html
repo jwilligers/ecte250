@@ -1,12 +1,106 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
 	<title>{{  title  }} - ECTE250 Team 7 </title>
+	
+	<!-- Bootstrap core CSS -->
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	        <!-- Custom styles for this template -->
+        <link href="blog.css" rel="stylesheet">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
 </head>
 
 
 <body>
-	<h1>Hello, {{ user.nickname}} </h1>
+	       <div class="blog-masthead">
+            <div class="container">
+                <nav class="blog-nav">
+                    <a class="blog-nav-item active" href="#">Home</a>
+                    <a class="blog-nav-item" href="#">Settings</a>
+                    <a class="blog-nav-item" href="#">History</a>
+                    <a class="blog-nav-item" href="#">Realtime</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+
+        <div class="blog-header">
+        <h1 class="blog-title">ECTE 250 Team 7 2015</h1>
+        <p class="lead blog-description">Gas monitoring by smart solutions.</p>
+        </div>
+
+        <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title"></h2>
+            <p class="blog-post-meta"><a href="mooshroomgamers.html">This website was a project created by Mooshroom Gamers</a></p>
+
+
+            	<h1>Hello, {{ user.nickname}} </h1>
+          </div>
+
+        </div>
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is a project my ECTE250 Team 7 2015</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Gases</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">Carbon Dioxide</a></li>
+              <li><a href="#">Carbon Monoxide</a></li>
+              <li><a href="#">Oxygen></li>
+              <li><a href="#">Methane</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <div class="blog-footer">
+      <p>Website made by ECTE250 Team 7 Smart Solutions.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+	
+	
+	
+	
+	
 </body>
 
 
