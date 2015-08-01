@@ -23,11 +23,6 @@ def index():
 	user = {'nickname': 'Josh'}
 	return render_template('index.html',title='Home',user=user)
 
-@app.route("/temp")
-def temp:
-	query = "SELECT timestamp, temperature from data"
-	conn.execute(query)
-	return render_template('index.html',title='Query',user=user)
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')
