@@ -1,4 +1,13 @@
-sudo apt-get install python-virtualenv
+sudo apt-get install python-virtualenv git
 virtualenv venv
 source venv/bin/activate
 pip install flask
+
+wget https://bitbucket.org/pypa/setuptools/raw/ bootstrap/ez_setup.py
+python ez_setup.py user
+easy_install pyserial
+sudo apt-get install arduino
+
+
+easy_install nanpy
+git clone https://github.com/nanpy/nanpy.git
