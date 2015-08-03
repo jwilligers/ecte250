@@ -20,8 +20,11 @@ cursor = conn.cursor()
 @app.route('/')
 def index():
 	user = {'nickname': 'Josh'}
-	return render_template('index.html',title='Home',user=user)
-
+	return render_template('index.html',title='Home',user=user, selected = "Home")
+@app.route('/Settings')
+def settings():
+	user = {'nickname': 'Hudson'}
+	return render_template('index.html',title='Home',user=user, selected = "Settings")
 @app.route('/barchart/')
 def forecast():
     """ render svg graph """

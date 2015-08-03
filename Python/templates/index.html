@@ -5,15 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="ECTE250 Team 7">
 
 	<title>{{  title  }} - ECTE250 Team 7 </title>
-	
+
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="./static/css/bootstrap.min.css" />
 	        <!-- Custom styles for this template -->
         <link href="./static/blog.css" rel="stylesheet">
-	<!-- Optional theme -->
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 </head>
@@ -23,8 +23,17 @@
 	       <div class="blog-masthead">
             <div class="container">
                 <nav class="blog-nav">
-                    <a class="blog-nav-item active" href="#">Home</a>
+									{% if selected == "Home" %}
+							    	<a class="blog-nav-item-active" href="#">Home</a>
+						  		{% else %}
+							    	<a class="blog-nav-item" href="#">Home</a>
+							  	{% endif %}
+									{% if selected == "Settings" %}
+                    <a class="blog-nav-item-active" href="#">Settings</a>
+						  		{% else %}
                     <a class="blog-nav-item" href="#">Settings</a>
+							  	{% endif %}
+
                     <a class="blog-nav-item" href="#">History</a>
                     <a class="blog-nav-item" href="#">Realtime</a>
                 </nav>
