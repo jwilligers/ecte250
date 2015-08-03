@@ -18,6 +18,7 @@ cursor = conn.cursor()
 
 
 @app.route('/')
+@app.route('/Home')
 def index():
 	user = {'nickname': 'Josh'}
 	return render_template('index.html',title='Home',user=user, selected = "Home")
