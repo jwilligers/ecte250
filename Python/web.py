@@ -4,6 +4,8 @@ import pygal
 
 app = Flask(__name__)
 
+DEBUG = True
+
 mysql = MySQL()
 
 # MySQL configurations
@@ -16,7 +18,6 @@ mysql.init_app(app)
 conn = mysql.connect()
 cursor = conn.cursor()
 
-
 @app.route('/')
 @app.route('/Home')
 def index():
@@ -25,7 +26,14 @@ def index():
 @app.route('/Settings')
 def settings():
 	user = {'nickname': 'Hudson'}
-	return render_template('index.html',title='Home',user=user, selected = "Settings")
+	return render_template('index.html',title='Settings',user=user, selected = "Settings")
+	
+@app.route('/gas/<gas>')
+def showGasInfo(gas):
+	user = {'nickname': 'Hudson'}
+	return render_template('index.html',title=gas, selected = "Home", user=user)
+
+
 @app.route('/barchart/')
 def forecast():
     """ render svg graph """
