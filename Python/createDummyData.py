@@ -3,12 +3,9 @@ import MySQLdb
 import time
 import random
 
-
 db = MySQLdb.connect("localhost", "root", "elect1", "SensorData")
 
 curs=db.cursor()
-
-id = 5
 
 temp = 23.54
 for id in range(1,100):
