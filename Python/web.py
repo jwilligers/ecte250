@@ -36,14 +36,14 @@ def showGasInfo(gas):
 
 @app.route('/barchart/')
 def forecast():
-    """ render svg graph """
-    bar_chart = pygal.Bar(width=450 ,height=300)
-    bar_chart.title = "Barchart"
-    inside,outside,params = [21,21.2,22,21,24.5,23.5],[15,18,20,34,23,23],['Monday','Tuesday','Wednesday', 'Thursday', 'Friday']
-    bar_chart.add('Inside', inside)
-    bar_chart.add('Outside', outside)
-    bar_chart.x_labels = params
-    return Response(response=bar_chart.render(), content_type='image/svg+xml')
+	""" render svg graph """
+	bar_chart = pygal.Bar(width=450 ,height=300)
+	bar_chart.title = "Barchart"
+	inside,outside,params = [21,21.2,22,21,24.5,23.5],[15,18,20,34,23,23],['Monday','Tuesday','Wednesday', 'Thursday', 'Friday']
+	bar_chart.add('Inside', inside)
+	bar_chart.add('Outside', outside)
+	bar_chart.x_labels = params
+	return Response(response=bar_chart.render(), content_type='image/svg+xml')
 
 if __name__ == '__main__':
 	app.config['DEBUG'] = True
