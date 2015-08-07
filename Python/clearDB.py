@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import MySQLdb
-import time
 
 
 db = MySQLdb.connect("localhost", "root", "elect1", "SensorData")
