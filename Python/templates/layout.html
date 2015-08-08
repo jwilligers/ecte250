@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="ECTE250 Team 7">
+
+	<title>{{  title  }} - ECTE250 Team 7 </title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+
+	<!-- Custom styles for this template -->
+	<link href="{{ url_for('static', filename='blog.css') }}" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+</head>
+
+<body>
+   <div class="blog-masthead">
+		<div class="container">
+			<nav class="blog-nav">
+				{% if selected == "Home" %}
+					<a class="blog-nav-item active" href="/Home">Home</a>
+				{% else %}
+					<a class="blog-nav-item" href="/Home">Home</a>
+				{% endif %}
+				{% if selected == "Settings" %}
+					<a class="blog-nav-item active" href="/Settings">Settings</a>
+				{% else %}
+					<a class="blog-nav-item" href="/Settings">Settings</a>
+				{% endif %}
+
+				<a class="blog-nav-item" href="#">History</a>
+				<a class="blog-nav-item" href="#">Realtime</a>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container">
+
+		<div class="blog-header">
+		<h1 class="blog-title">ECTE 250 Team 7 2015</h1>
+		<p class="lead blog-description">Gas monitoring by smart solutions.</p>
+	</div>
+
+	<div class="row">
+
+		<div class="col-sm-8 blog-main">
+			{%block body %}
+			{% endblock %}
+		</div>
+
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+			<div class="sidebar-module sidebar-module-inset">
+				<h4>About</h4>
+				<p>This is a project for ECTE250 Team 7 Smart Solutions</p>
+			</div>
+			<div class="sidebar-module">
+				<h4>Gases</h4>
+				<ol class="list-unstyled">
+				<li><a href="/gas/CO2">Carbon Dioxide</a></li>
+				<li><a href="/gas/CO">Carbon Monoxide</a></li>
+				<li><a href="/gas/Oxygen">Oxygen</li>
+				<li><a href="/gas/Methane">Methane</a></li>
+				</ol>
+			</div>
+			<div class="sidebar-module">
+				<h4>Links</h4>
+				<ol class="list-unstyled">
+				<li><a href="https://github.com/jwilligers/ecte250">GitHub</a></li>
+				<li><a href="#">Facebook</a></li>
+				</ol>
+			</div>
+		</div><!-- /.blog-sidebar -->
+
+	</div><!-- /.row -->
+
+</div><!-- /.container -->
+
+<div class="blog-footer">
+	<p>Website made by ECTE250 Team 7 Smart Solutions.</p>
+	<p>
+	<a href="#">Back to top</a>
+	</p>
+</div>
+
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" />
+
+</body>
+
+</html>

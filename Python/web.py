@@ -25,13 +25,13 @@ def index():
 	return render_template('index.html',title='Home',user=user, selected = "Home")
 @app.route('/Settings')
 def settings():
-	user = {'nickname': 'Hudson'}
+	user = {'nickname': 'usename'}
 	return render_template('index.html',title='Settings',user=user, selected = "Settings")
 	
 @app.route('/gas/<gas>')
 def showGasInfo(gas):
 	user = {'nickname': 'Hudson'}
-	return render_template('index.html',title=gas, selected = "Home", user=user)
+	return render_template('gasInfo.html',title=gas, gas = gas, user=user)
 
 
 @app.route('/barchart/')

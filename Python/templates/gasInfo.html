@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+	<div class="blog-post">
+		<h2 class="blog-post-title"></h2>
+		Gas info
+		<br />
+		{% if gas == "CO2" %}
+			Carbon Dioxide
+		{% elif gas == "CO" %}
+			Carbon Monoxide
+		{% elif gas == "Oxygen" %}
+			Oxygen
+		{% elif gas == "Methane" %}
+			Methane
+			
+		{% endif %}
+
+	</div>
+{% endblock %}
