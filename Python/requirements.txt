@@ -1,69 +1,41 @@
-sudo apt-get install python-virtualenv git
+﻿sudo apt-get install python-virtualenv git
 virtualenv venv
 source venv/bin/activate
 pip install flask
 
-wget https://bitbucket.org/pypa/setuptools/raw/ bootstrap/ez_setup.py
-python ez_setup.py user
-easy_install pyserial
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+sudo sh setuptools-0.6c11-py2.7.egg
+sudo python ez_setup.py user
+sudo easy_install pyserial
 sudo apt-get install arduino
+sudo apt-get install git
+sudo python ez_setup.py user
+sudo easy_install nanpy
+sudo python ~/pi/nanpy/setup.py develop
 
-
-easy_install nanpy
 git clone https://github.com/nanpy/nanpy.git
+git clone https://github.com/nanpy/nanpy-firmware.git
 
-
-
-
-https://pypi.python.org/pypi/setuptools
-
-   sudo sh setuptools-0.6c11-py2.7.egg
-
-
-   Install serialpy
-Using Midori go to https://pypi.python.org/pypi/pyserial
-Download pyserial-2.6.tar.gz
-Make a temp folder and move the downloaded file into it.
-Using LXTerminal
-CODE: SELECT ALL
-cd temp   #Change to the temp directory
-gunzip pyserial-2.6.tar.gz    #to unzip it
-tar –xvf pyserial-2.6.tar    #to untar it
-cd pyserial-2.6   #move into the new folder
-sudo python setup.py install   #to install it
 
 https://github.com/nanpy/nanpy
 https://pypi.python.org/pypi/nanpy/
-Step 01 Grab an Arduino
-Before you can do anything, you need an Arduino. We recommend the Uno, since it’s the default choice with the best balance of features, convenience and affordability. Since you’ll want to put it to use straight away, we recommend investing in a ‘starter kit’ that includes LEDs, servos and all that fun stuff.
-Step 02 Satisfying dependencies
-We’re assuming you’re using Raspbian (recommended), so open your terminal because we need to get setuptools so we can install Nanpy. At the terminal, type:
-$ wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
-$ python ez_setup.py user
-Once this is complete, you’ll be able to use the easy_install command to install pyserial…
-Step 3 Final preparations
-Since the communication between the Arduino and Raspberry Pi will happen over the USB serial connection, we need to get the Python-serial library. At the terminal, type:
-$ easy_install pyserial
-We also need to install the Arduino software so the Pi knows how to deal with the device when it’s plugged in. In the terminal, type:
-$ sudo apt-get update
-$ sudo apt-get install arduino
-Step 04 Install Nanpy
-There are only two steps remaining in the configuration. First, we need to get the Nanpy package downloaded and installed on the Pi. Our preferred way is to clone it with Git. Navigate to your home folder in the terminal (cd ~) and do the following in the terminal, one after the other:
-$ easy_install nanpy
-$ sudo apt-get install git
-$ git clone https://github.com/nanpy/nanpy.git
-Step 05 Configure your Arduino Uno
-Why have we cloned the original Git repository? Nanpy relies on an update to the Arduino firmware to function correctly, so you’ll need to access the firmware folder from the nanpy project directory to do it. Before typing the following into the terminal, plug your Arduino Uno into a spare port on the Raspberry Pi. Beware: the following takes some time!
-$ cd nanpy/firmware
-$ export BOARD=uno
-$ make
-$ make upload
-Step 06 Testing Arduino with your Pi
-With the installation finally complete, we can test the setup to make sure it works properly. Before we do a proper ‘Hello World’ application in the code segment to the right, let’s first ensure Nanpy is properly installed and the connection between Pi and Arduino is working. From your home folder (cd ~), type the following into the terminal:
-$ nano nanpy_test.py
+
+Plug your Arduino Uno into a spare port on the Raspberry Pi. Beware: the following takes some time!
+cd nanpy/firmware
+export BOARD=uno
+make
+make upload
+
+
+Let’s first ensure Nanpy is properly installed and the connection between Pi and Arduino is working. From your home folder (cd ~), type the following into the terminal:
+nano nanpy_test.py
 In the nano editor, simply write:
-$ from nanpy imort Arduino
-Now press Ctrl+X, Y, then Enter to save your new file.
-Finally, in the terminal, type:
-$ Python nanpy_test.py
-If you don’t see an error, then everything should be working fine. Now you can play with the code across the page to start learning your way around Nanpy.
+from nanpy imort Arduino
+
+python nanpy_test.py
+
+
+Samba Share:
+sudo apt-get install samba samba-common-bin
+
+
