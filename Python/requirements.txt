@@ -2,6 +2,12 @@
 virtualenv venv
 source venv/bin/activate
 pip install flask
+pip install flask-mysqldb
+pip install flask-mysql
+
+For windows: http://www.microsoft.com/en-us/download/details.aspx?id=44266
+
+pip install nanpy
 
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 sudo sh setuptools-0.6c11-py2.7.egg
@@ -10,7 +16,6 @@ sudo easy_install pyserial
 sudo apt-get install arduino
 sudo apt-get install git
 sudo python ez_setup.py user
-sudo easy_install nanpy
 sudo python ~/pi/nanpy/setup.py develop
 
 git clone https://github.com/nanpy/nanpy.git
