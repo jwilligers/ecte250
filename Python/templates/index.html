@@ -1,11 +1,23 @@
 {% extends "layout.html" %}
 
 {% block body %}
-			<figure >
-			<embed type="image/svg+xml" src="/barchart/"/>
-			</figure>
-			<div class="blog-post">
-				<h2 class="blog-post-title"></h2>
-				<h1>Hello, {{ user.nickname}} </h1>
-			</div>
+
+    <div class="row">
+
+		<div class="col-sm-6">
+            <figure >
+                <embed type="image/svg+xml" src="/barchart/temp/day"/>
+            </figure>
+		</div>
+        <div class="col-sm-6">
+            <figure >
+            <embed type="image/svg+xml" src="/barchart/humidity/day"/>
+            </figure>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title"></h2>
+            <h1>Hello, {{ user.nickname}} </h1>
+        </div>
+    </div>
 {% endblock %}
