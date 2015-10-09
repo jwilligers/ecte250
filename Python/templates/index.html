@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<<<<<<< HEAD
 			<figure >
 			<embed type="image/svg+xml" src="/barchart/"> </embed>
 			</figure>
@@ -8,4 +9,37 @@
 				<h2 class="blog-post-title"></h2>
 				<h1>Hello, {{ user.nickname}} </h1>
 			</div>
+=======
+
+    <div class="row">
+
+		<div class="col-sm-6">
+            <h1>Temperature</h1>
+            <figure >
+                <embed type="image/svg+xml" src="/barchart/temp/day"/>
+            </figure>
+            <p />
+            <h1>PIR Detection</h1>
+            <figure >
+                <embed type="image/svg+xml" src="/barchart/pir/day"/>
+            </figure>
+		</div>
+        <div class="col-sm-6">
+            <h1>Humidity</h1>
+            <figure >
+            <embed type="image/svg+xml" src="/barchart/humidity/day"/>
+            </figure>
+            <p />
+            <h1>Variable Resistor</h1>
+            <figure >
+                <embed type="image/svg+xml" src="/barchart/var/day"/>
+            </figure>
+        </div>
+
+        <div class="blog-post">
+            <h2 class="blog-post-title"></h2>
+            <h1>Hello, {{ user.nickname}} </h1>
+        </div>
+    </div>
+>>>>>>> cd54797259e853ba1678a3b37147fef4b2d2fd81
 {% endblock %}
