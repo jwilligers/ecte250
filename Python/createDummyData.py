@@ -19,16 +19,21 @@ if createDatabase:
 	)
 	""")
 	db.commit()
-	print "Database created"
+	print "Database sensorData created"
 
 if createDummyData:
 	temp = 23.54
-	for i in range(1,100):
+	for i in range(1,40):
 		timestamp = time.time()
 		rand = random.randrange(0,10)
-		print timestamp
-		print ("INSERT INTO data values("+str(i)+ ","+ str(timestamp) +"," +  str(rand%2==0) +"," + str(temp+rand) + "," + str(i/1.0) +"," + str(i/10.0*pow(i,0.5)) + ")")
+		#print timestamp
+		#sql = "INSERT INTO sensorData(id,pirDetection, temperature, humidity, varResistor) VALUES (" + str(i) + ", 2, 3.3, 4.3, 0.34);"
+		#print(sql)
+		#curs.execute (sql)
+		#curs.execute ("INSERT INTO sensorData values("+str(i)+ ","+ str(rand%2==0) +"," + str(temp+rand) + "," + str(i/1.0) +"," + str(i/10.0*pow(i,0.5)) + ")")
+		curs.execute ("INSERT INTO sensorData values("+str(i)+ ","+ str(rand%2==0) +"," + str(temp+rand) + "," + str(rand) +"," + str(i) + ")")
+		print(str(i))
 	#	curs.execute ("INSERT INTO data values("+str(i)+ ","+ time+"," +  random%2==0 +"," + str(temp+random)+ "," + i/1.0 +","+ i/10.0*pow(i,0.5) ")")
-		time.sleep(1)
+#		time.sleep(0.2)
 	db.commit()
 	print "Data committed"
