@@ -66,7 +66,9 @@ if source == "Serial":
 		print(values)
 		if (len(values) == 6):
 			flammablegas = values[0]
+			print("Flammable Gas = " + flammablegas )
 			methane = values[1]
+			print("Methane = " + methane)
 			carbonmonoxide = values[2]
 			lpg = values[3]
 			humidity = values[4]
